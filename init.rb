@@ -14,3 +14,6 @@ if Sinatra::Base.development? ||Sinatra::Base.test?
   require "rspec-html-matchers"
 end
 
+require_relative "web"
+require_relative "api"
+
