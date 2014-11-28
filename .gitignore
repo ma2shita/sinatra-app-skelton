@@ -1,0 +1,8 @@
+.bundle
+.ruby-version
+.ruby-gemset
+.rvmrc
+/tmp
+/vendor/bundle
+.sass-cache
+
