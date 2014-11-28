@@ -6,5 +6,6 @@ end
 guard :shotgun, server: "thin", host: "0.0.0.0", port: "3001" do
   watch("config.ru")
   watch("api.rb")
+  watch(%r{(models|lib)/.+\.rb$})
 end
 

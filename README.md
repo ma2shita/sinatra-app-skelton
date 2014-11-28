@@ -38,7 +38,19 @@ $ bundle exec guard -i
 
 Test:
 $ bundle exec rake spec
+
+Open console:
+$ bundle exec rake console
+[1] pry(main)> RUBY_VERSION
+=> "2.1.5"
 ```
+
+
+Extend
+------
+
+* `models/**/*.rb`、`lib/**/*.rb`が存在すれは、読み込みます
+* viewはSinatra標準の`views/`です
 
 EoT
 

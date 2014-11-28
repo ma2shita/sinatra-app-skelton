@@ -14,6 +14,10 @@ if Sinatra::Base.development? ||Sinatra::Base.test?
   require "rspec-html-matchers"
 end
 
+Dir.chdir(File.expand_path(File.dirname(__FILE__))) do
+  Dir.glob(File.join("models", "**", "*.rb")) { |rb| require_relative rb }
+  Dir.glob(File.join("lib", "**", "*.rb")) { |rb| require_relative rb }
+end
 require_relative "web"
 require_relative "api"
 
