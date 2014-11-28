@@ -10,7 +10,7 @@ guard :shotgun, server: "thin", host: "0.0.0.0", port: "3001" do
 end
 
 guard :rspec, :cmd => "bundle exec rspec" do
-  watch("spec/spec_helper.rb")
+  watch("spec/spec_helper.rb") { "spec" }
   watch(%r{spec/.+_spec\.rb$})
   watch(%r{^(api|web)\.rb$}) { |m| "spec/#{m[1]}_spec.rb" }
 end
