@@ -18,7 +18,7 @@ Quick Start
 -----------
 
 ```
-$ git clone  APP
+$ git clone https://github.com/ma2shita/sinatra-app-skelton.git APP
 $ cd APP
 $ rm -rf .git
 $ bundle install --path vendor/bundle
