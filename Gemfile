@@ -16,6 +16,7 @@ group :development, :test do
   # for auto reload
   gem "guard"
   gem "guard-shotgun"
+  gem "guard-rspec"
   gem "sinatra-contrib"
   gem "thin"
   # for live reload

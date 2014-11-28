@@ -14,6 +14,7 @@ Rubyは2.0.0以上です
 
 DB環境、デザイン用フレームワークは入っていません。DBは[Sequel](http://sequel.jeremyevans.net/)や[ActiveRecord](https://github.com/rails/rails/tree/master/activerecord)と[database\_cleaner](https://github.com/DatabaseCleaner/database_cleaner)、デザインは[Sinatra TwitterBootstrap](https://github.com/ma2shita/sinatra-twitter-bootstrap/tree/versioning_feature)はどうでしょうか
 
+
 Quick Start
 -----------
 
@@ -29,8 +30,14 @@ $ bundle exec guard -i
 Access to http://localhost:3001 it's awesome !!
 
 
-Operation
----------
+開発スタイル
+------------
+
+`bundle exec guard -i` でGuardを立ち上げたら、ひたすら開発です
+
+* ThinがPORT=3001で起動します。http://localhost:3001 へアクセスしてください
+* rail consoleライクなPry consoleが`bundle exec rake console`で提供されます
+* RSpecはGuard経由で自動実行です。Guardを立ち上げたコンソールに結果が表示されます
 
 ```
 Server:
