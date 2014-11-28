@@ -8,16 +8,16 @@ describe App::Web do
   end
 
   describe "GET /" do
-    it "return Index" do
-      get "/"
-      expect(last_response.status).to eq 200
-      b = last_response.body
-      expect(b).to have_tag(:title, :text => "Sinatra Bootstrap")
-      expect(b).to have_tag(:h1, :text => /^This is .+ Bootstrap$/)
-      expect(b).to have_tag(:p) {
-        with_tag(:a, :with => {:href => "/api/hello" })
+    subject { get "/" }
+    its(:status){ should eq 200 }
+    its(:body) { should have_tag(:title, :text => "Sinatra Bootstrap") }
+    its(:body) { should have_tag(:h1, :text => /^This is .+ Bootstrap$/) }
+    its(:body) {
+      should have_tag("#txt") {
+        with_text(/API/)
+        with_tag(:a, :href => "/api/hello")
       }
-    end
+    }
   end
 end
 

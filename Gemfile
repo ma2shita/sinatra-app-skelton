@@ -25,6 +25,8 @@ end
 
 group :test do
   gem "rspec"
+  gem "rspec-its"
+  gem "rspec-json_matcher"
   gem "timecop"
   gem "rspec-html-matchers"
 end

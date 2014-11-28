@@ -23,5 +23,5 @@ html[lang="ja"]
 
 @@ index
 h1 This is Sinatra Bootstrap
-p I have API. Try <a href="/api/hello">this</a>.
+p#txt I have API. Try <a href="/api/hello">this</a>.
 
