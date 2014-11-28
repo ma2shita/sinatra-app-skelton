@@ -10,9 +10,9 @@ describe App::API do
   describe "GET /api/hello" do
     before { Timecop.freeze(2014, 12, 20, 15, 26, 37) }
     subject { get "/api/hello" }
-    its(:status){ should eq 200 }
+    its(:status){ is_expected.to eq 200 }
     let(:params){ {:hello => "Hello! Today is 2014-12-20 15:26:37 +0900"} }
-    its(:body){ should be_json_as params }
+    its(:body){ is_expected.to be_json_as params }
     after { Timecop.return }
   end
 
@@ -20,13 +20,13 @@ describe App::API do
     context "case of fail" do
       subject { get "/api/hello2", :p => 1234 }
       let(:params){ {:hello => 123} }
-      its(:body){ should be_json_as params }
+      its(:body){ is_expected.to be_json_as params }
     end
 
     context "reject bad parameter" do
       subject { get "/api/hello2", :p => "world" }
-      its(:status){ should eq 400 }
-      its(:body){ should be_json_as ({:error => /invalid$/}) }
+      its(:status){ is_expected.to eq 400 }
+      its(:body){ is_expected.to be_json_as ({:error => /invalid$/}) }
     end
   end
 
