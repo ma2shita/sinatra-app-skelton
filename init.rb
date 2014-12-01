@@ -4,14 +4,13 @@ require "sinatra/base"
 require "grape"
 require "slim"
 require "sass"
-if Sinatra::Base.development? ||Sinatra::Base.test?
+if Sinatra::Base.development? || Sinatra::Base.test?
   require "pry-byebug"
   require "pry-rescue"
   require "pry-stack_explorer"
   require "tapp"
   require "sinatra/reloader"
   require "timecop"
-  require "rspec-html-matchers"
 end
 
 Dir.chdir(File.expand_path(File.dirname(__FILE__))) do

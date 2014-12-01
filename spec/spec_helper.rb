@@ -4,6 +4,7 @@ require "rspec/json_matcher"
 require "json"
 require "i18n"
 I18n.enforce_available_locales = false
+require "rspec-html-matchers"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
